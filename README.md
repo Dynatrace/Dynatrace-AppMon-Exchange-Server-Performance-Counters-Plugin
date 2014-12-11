@@ -25,13 +25,13 @@ Unified Messaging, or Edge Transport roles installed.
 
   * [Exchange Server Client Access Performance Monitor](#exchange-server-client-access-performance-monitor)
 
-  * [Exchange Server Hub Performance Monitor](#exchange_server_hub_performance_monitor)
+  * [Exchange Server Hub Performance Monitor](#exchange-server-hub-performance-monitor)
 
-  * [Exchange Server Mailbox Performance Monitor](#exchange_server_mailbox_performance_monitor)
+  * [Exchange Server Mailbox Performance Monitor](#exchange-server-mailbox-performance-monitor)
 
-  * [Exchange Unified Messaging Performance Monitor](#exchange_unified_messaging_performance_monitor)
+  * [Exchange Unified Messaging Performance Monitor](#exchange-unified-messaging-performance-monitor)
 
-  * [Exchange Edge Transport Role Performance Monitor](#exchange_edge_transport_role_performance_monitor)
+  * [Exchange Edge Transport Role Performance Monitor](#exchange-edge-transport-role-performance-monitor)
 
 ## Exchange Server Client Access Performance Monitor
 
