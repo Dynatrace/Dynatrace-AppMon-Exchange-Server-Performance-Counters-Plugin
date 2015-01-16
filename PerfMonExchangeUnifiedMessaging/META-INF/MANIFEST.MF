@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Bundle-Vendor: dynaTrace software GmbH
-Bundle-ClassPath: .
-Bundle-Version: 3.5.2.4
-Bundle-Name: Exchange Server Unified Messaging Perfmon counters
-Bundle-ManifestVersion: 2
-Bundle-SymbolicName: com.dynatrace.diagnostics.plugin.PerfMonExchangeS
- erverUnifiedMessaging;singleton:=true
-
