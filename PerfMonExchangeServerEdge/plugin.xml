@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<!-- plugin.xml file written by dynaTrace Client 3.5.2 -->
+<plugin>
+  <extension point="com.dynatrace.diagnostics.pdk.monitormetricgroup" id="com.dynatrace.diagnostics.plugin.PerfMonExchangeEdge" name="Exchange Server Edge Transport Performance Monitor">
+    <metricgroup monitorid="com.dynatrace.diagnostics.plugins.PerfPluginMonitor">
+      <metric defaultrate="purepath" name="Recipients Rejected by Recipient Validation/sec" unit="number" description="Show the number of recipients rejected by recipient validation per second.">
+        <property key="objectName" value="MSExchange Recipient Filter Agent" optional="false" />
+        <property key="counterName" value="Recipients Rejected by Recipient Validation/sec" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Recipients Rejected by Block List/sec" unit="number" description="Show the number of recipients rejected by block list per second.">
+        <property key="objectName" value="MSExchange Recipient Filter Agent" optional="false" />
+        <property key="counterName" value="Recipients Rejected by Block List/sec" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Messages Filtered by Sender Filter/sec" unit="number" description="Show the number of messages filtered by the Sender Filter agent per second.">
+        <property key="objectName" value="MSExchange Sender Filter Agent" optional="false" />
+        <property key="counterName" value="Messages Filtered by Sender Filter/sec" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="DNS queries/sec" unit="number" description="Shows the number of DNS queries per second performed by the Sender Id agent.">
+        <property key="objectName" value="MSExchange Sender Id Agent" optional="false" />
+        <property key="counterName" value="DNS queries/sec" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Messages Attachment Filtered" unit="number" description="Shows the number of messages that were blocked, stripped of attachments, or silently deleted (as per configuration) by the attachment filtering agent.">
+        <property key="objectName" value="MSExchange Attachment Filtering" optional="false" />
+        <property key="counterName" value="Messages Attachment Filtered" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Messages Filtered/sec" unit="number" description="Shows the number of messages per second that the attachment filtering agent blocked, stripped of attachments, or silently deleted. If this rate rises greatly beyond what is “normal” for the Exchange server, it may indicate that the organization is being flooded with malicious e-mail.">
+        <property key="objectName" value="MSExchange Attachment Filtering" optional="false" />
+        <property key="counterName" value="Messages Filtered/sec" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Messages Deleted" unit="number" description="Shows the total number of messages that were deleted by Content Filter Agent.">
+        <property key="objectName" value="MSExchange Content Filter Agent" optional="false" />
+        <property key="counterName" value="Messages Deleted" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Messages Quarantined" unit="number" description="Shows the total number of messages that were quarantined by Content Filter Agent.">
+        <property key="objectName" value="MSExchange Content Filter Agent" optional="false" />
+        <property key="counterName" value="Messages Quarantined" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Messages Rejected" unit="number" description="Shows the total number of messages that were rejected by Content Filter Agent.">
+        <property key="objectName" value="MSExchange Content Filter Agent" optional="false" />
+        <property key="counterName" value="Messages Rejected" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Messages that Bypassed Scanning" unit="number" description="Shows the total number of messages that bypass scanning.">
+        <property key="objectName" value="MSExchange Content Filter Agent" optional="false" />
+        <property key="counterName" value="Messages that Bypassed Scanning" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Messages Scanned Per Second" unit="number" description="Shows the number of messages scanned per second.">
+        <property key="objectName" value="MSExchange Content Filter Agent" optional="false" />
+        <property key="counterName" value="Messages Scanned Per Second" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Messages with SCL 0" unit="number" description="Shows the total number of messages assigned to SCL 0 level.">
+        <property key="objectName" value="MSExchange Content Filter Agent" optional="false" />
+        <property key="counterName" value="Messages with SCL 0" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Messages with SCL 1" unit="number" description="Shows the total number of messages assigned to SCL 1 level.">
+        <property key="objectName" value="MSExchange Content Filter Agent" optional="false" />
+        <property key="counterName" value="Messages with SCL 1" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Messages with SCL 2" unit="number" description="Shows the total number of messages assigned to SCL 2 level.">
+        <property key="objectName" value="MSExchange Content Filter Agent" optional="false" />
+        <property key="counterName" value="Messages with SCL 2" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Messages with SCL 3" unit="number" description="Shows the total number of messages assigned to SCL 3 level.">
+        <property key="objectName" value="MSExchange Content Filter Agent" optional="false" />
+        <property key="counterName" value="Messages with SCL 3" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Messages with SCL 4" unit="number" description="Shows the total number of messages assigned to SCL 4 level.">
+        <property key="objectName" value="MSExchange Content Filter Agent" optional="false" />
+        <property key="counterName" value="Messages with SCL 4" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Messages with SCL 5" unit="number" description="Shows the total number of messages assigned to SCL 5 level.">
+        <property key="objectName" value="MSExchange Content Filter Agent" optional="false" />
+        <property key="counterName" value="Messages with SCL 5" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Messages with SCL 6" unit="number" description="Shows the total number of messages assigned to SCL 6 level.">
+        <property key="objectName" value="MSExchange Content Filter Agent" optional="false" />
+        <property key="counterName" value="Messages with SCL 6" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Messages with SCL 7" unit="number" description="Shows the total number of messages assigned to SCL 7 level.">
+        <property key="objectName" value="MSExchange Content Filter Agent" optional="false" />
+        <property key="counterName" value="Messages with SCL 7" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Messages with SCL 8" unit="number" description="Shows the total number of messages assigned to SCL 8 level.">
+        <property key="objectName" value="MSExchange Content Filter Agent" optional="false" />
+        <property key="counterName" value="Messages with SCL 8" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Messages with SCL 9" unit="number" description="Shows the total number of messages assigned to SCL 9 level.">
+        <property key="objectName" value="MSExchange Content Filter Agent" optional="false" />
+        <property key="counterName" value="Messages with SCL 9" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Block Senders" unit="number" description="Shows the total number of blocked senders.">
+        <property key="objectName" value="MSExchange Protocol Analysis Background Agent" optional="false" />
+        <property key="counterName" value="Block Senders" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Edge objects added/sec" unit="number" description="Shows the rate of Edge objects added per second by EdgeSync.">
+        <property key="objectName" value="MSExchangeEdgeSync Job" optional="false" />
+        <property key="counterName" value="Edge objects added/sec" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Edge objects deleted/sec" unit="number" description="Shows the rate of Edge objects deleted per second by EdgeSync.">
+        <property key="objectName" value="MSExchangeEdgeSync Job" optional="false" />
+        <property key="counterName" value="Edge objects deleted/sec" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Edge objects updated/sec" unit="number" description="Shows the rate of Edge objects updated per second by EdgeSync.">
+        <property key="objectName" value="MSExchangeEdgeSync Job" optional="false" />
+        <property key="counterName" value="Edge objects updated/sec" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Scan jobs completed successfully total" unit="number" description="Shows the total number of scan jobs completed successfully by EdgeSync.">
+        <property key="objectName" value="MSExchangeEdgeSync Job" optional="false" />
+        <property key="counterName" value="Scan jobs completed successfully total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Scan jobs failed because could not extend lock total" unit="number" description="Shows the total number of EdgeSync scan jobs that failed because EdgeSync could not extend its lease of an Edge Transport server.">
+        <property key="objectName" value="MSExchangeEdgeSync Job" optional="false" />
+        <property key="counterName" value="Scan jobs failed because could not extend lock total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Scan jobs failed because of directory error total" unit="number" description="Shows the total number of EdgeSync directory errors.">
+        <property key="objectName" value="MSExchangeEdgeSync Job" optional="false" />
+        <property key="counterName" value="Scan jobs failed because of directory error total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Scan jobs failed because could not lock total" unit="number" description="My metric description ...">
+        <property key="objectName" value="MSExchangeEdgeSync Job" optional="false" />
+        <property key="counterName" value="Scan jobs failed because could not lock total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Source objects scanned/sec" unit="number" description="Shows the rate of Active Directory objects scanned per second by EdgeSync.">
+        <property key="objectName" value="MSExchangeEdgeSync Job" optional="false" />
+        <property key="counterName" value="Source objects scanned/sec" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Target objects scanned/sec" unit="number" description="Shows the rate of Edge objects scanned per second by EdgeSync.">
+        <property key="objectName" value="MSExchangeEdgeSync Job" optional="false" />
+        <property key="counterName" value="Target objects scanned/sec" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="LDAP Searches/sec" unit="number" description="Shows the rate at which LDAP clients perfom search operations.">
+        <property key="objectName" value="ADAM_MSExchange" optional="false" />
+        <property key="counterName" value="LDAP Searches/sec" optional="false" />
+        <property key="instanceName" value="AD/AM" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="LDAP Writes/sec" unit="number" description="Shows the rate at which LDAP clients perform write operations.">
+        <property key="objectName" value="ADAM_MSExchange" optional="false" />
+        <property key="counterName" value="LDAP Writes/sec" optional="false" />
+        <property key="instanceName" value="AD/AM" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Messages Evaluated/sec" unit="number" description="Shows the number of messages the rule has evaluated per second.">
+        <property key="objectName" value="MSExchange Transport Rules" optional="false" />
+        <property key="counterName" value="Messages Evaluated/sec" optional="false" />
+        <property key="instanceName" value="_total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Message Processed/sec" unit="number" description="Shows the number of messages the rule has processed per second.">
+        <property key="objectName" value="MSExchange Transport Rules" optional="false" />
+        <property key="counterName" value="Message Processed/sec" optional="false" />
+        <property key="instanceName" value="_total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="LDAP Searches/Sec" unit="number" description="Shows the number of Lightweight Directory Access Protocol (LDAP) search requests issued per second.">
+        <property key="objectName" value="MSExchange ADAccess Caches" optional="false" />
+        <property key="counterName" value="LDAP Searches/Sec" optional="false" />
+        <property key="instanceName" value="0" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="LDAP Read Time " unit="ms" description="Shows the time in milliseconds (ms) to send an LDAP read request to the specified domain controller and receive a response.">
+        <property key="objectName" value="MSExchange ADAccess Domain Controllers" optional="false" />
+        <property key="counterName" value="LDAP Read Time" optional="false" />
+        <property key="instanceName" value=" " optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="LDAP Search Time " unit="ms" description="Shows the time (in ms) to send an LDAP search request and receive a response.">
+        <property key="objectName" value="MSExchange ADAccess Domain Controllers" optional="false" />
+        <property key="counterName" value="LDAP Search Time" optional="false" />
+        <property key="instanceName" value=" " optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="LDAP Searches timed out per minute" unit="number" description="Shows the number of LDAP searches that have returned LDAP_Timeout during the last minute.">
+        <property key="objectName" value="MSExchange ADAccess Domain Controllers" optional="false" />
+        <property key="counterName" value="LDAP Searches timed out per minute" optional="false" />
+        <property key="instanceName" value=" " optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Long running LDAP operations/Min" unit="number" description="Shows the number of LDAP operations on this domain controller that took longer than the specified threshold per minute.">
+        <property key="objectName" value="MSExchange ADAccess Domain Controllers" optional="false" />
+        <property key="counterName" value="Long running LDAP operations/Min" optional="false" />
+        <property key="instanceName" value=" " optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="LDAP Read Time" unit="ms" description="Shows the time (in ms) to send an LDAP read request to the specified domain controller and receive a response.">
+        <property key="objectName" value="MSExchange ADAccess Processes" optional="false" />
+        <property key="counterName" value="LDAP Read Time" optional="false" />
+        <property key="instanceName" value=" " optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="LDAP Search Time" unit="ms" description="Shows the time (in ms) to send an LDAP search request and receive a response.">
+        <property key="objectName" value="MSExchange ADAccess Processes" optional="false" />
+        <property key="counterName" value="LDAP Search Time" optional="false" />
+        <property key="instanceName" value=" " optional="false" />
+      </metric>
+    </metricgroup>
+    <information>
+      <description value="When monitoring servers running Microsoft Exchange Server with the Edge Transport role installed." />
+    </information>
+  </extension>
+</plugin>
+
