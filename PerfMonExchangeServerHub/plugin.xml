@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<!-- plugin.xml file written by dynaTrace Client 3.5.2 -->
+<plugin>
+  <extension point="com.dynatrace.diagnostics.pdk.monitormetricgroup" id="com.dynatrace.diagnostics.plugin.PerfMonExchangeHub" name="Exchange Server Hub Performance Monitor">
+    <metricgroup monitorid="com.dynatrace.diagnostics.plugins.PerfPluginMonitor">
+      <metric defaultrate="purepath" name="Total Agent Invocations" unit="number" description="Shows the total number of invocations since the last restart.">
+        <property key="objectName" value="MSExchange Extensibility Agents" optional="false" />
+        <property key="counterName" value="Total Agent Invocations" optional="false" />
+        <property key="instanceName" value=" " optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Average Agent Processing Time (sec)" unit="s" description="Shows the average agent processing time in seconds per event.">
+        <property key="objectName" value="MSExchange Extensibility Agents" optional="false" />
+        <property key="counterName" value="Average Agent Processing Time (sec)" optional="false" />
+        <property key="instanceName" value=" " optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Dumpster Size" unit="bytes" description="Shows the total size (in bytes) of mail items that are currently in the transport dumpster on this server.">
+        <property key="objectName" value="MSExchangeTransport Dumpster" optional="false" />
+        <property key="counterName" value="Dumpster Size" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Dumpster Item Count" unit="number" description="Shows the total number of mail items that are currently in the transport dumpster on this server.">
+        <property key="objectName" value="MSExchangeTransport Dumpster" optional="false" />
+        <property key="counterName" value="Dumpster Item Count" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Dumpster Inserts/sec" unit="ms" description="Shows the rate at which items are inserted into the transport dumpster on this server.">
+        <property key="objectName" value="MSExchangeTransport Dumpster" optional="false" />
+        <property key="counterName" value="Dumpster Inserts/sec" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Dumpster Deletes/sec" unit="ms" description="Shows the rate at which items are deleted from the transport dumpster on this server.">
+        <property key="objectName" value="MSExchangeTransport Dumpster" optional="false" />
+        <property key="counterName" value="Dumpster Deletes/sec" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Unreachable Queue Length" unit="number" description="Shows the number of messages in the Unreachable queue.">
+        <property key="objectName" value="MSExchangeTransport Queues" optional="false" />
+        <property key="counterName" value="Unreachable Queue Length" optional="false" />
+        <property key="instanceName" value="_total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Largest Delivery Queue Length" unit="number" description="Shows the number of messages in the largest delivery queues.">
+        <property key="objectName" value="MSExchangeTransport Queues" optional="false" />
+        <property key="counterName" value="Largest Delivery Queue Length" optional="false" />
+        <property key="instanceName" value="_total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Poison Queue Length" unit="number" description="Shows the number of messages in the poison message queue.">
+        <property key="objectName" value="MSExchangeTransport Queues" optional="false" />
+        <property key="counterName" value="Poison Queue Length" optional="false" />
+        <property key="instanceName" value="_total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Aggregate Delivery Queue Length (All Queues)" unit="number" description="Shows the number of messages queued for delivery in all queues.">
+        <property key="objectName" value="MSExchangeTransport Queues" optional="false" />
+        <property key="counterName" value="Aggregate Delivery Queue Length (All Queues)" optional="false" />
+        <property key="instanceName" value="_total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Active Remote Delivery Queue Length" unit="number" description="Shows the number of messages in the active remote delivery queues.">
+        <property key="objectName" value="MSExchangeTransport Queues" optional="false" />
+        <property key="counterName" value="Active Remote Delivery Queue Length" optional="false" />
+        <property key="instanceName" value="_total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Active Mailbox Delivery Queue Length" unit="number" description="Shows the number of messages in the active mailbox queues.">
+        <property key="objectName" value="MSExchangeTransport Queues" optional="false" />
+        <property key="counterName" value="Active Mailbox Delivery Queue Length" optional="false" />
+        <property key="instanceName" value="_total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Submission Queue Length" unit="number" description="Shows the number of messages in the submission queue.">
+        <property key="objectName" value="MSExchangeTransport Queues" optional="false" />
+        <property key="counterName" value="Submission Queue Length" optional="false" />
+        <property key="instanceName" value="_total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Active Non-Smtp Delivery Queue Length" unit="number" description="Shows the number of messages in the Drop directory that is used by a Foreign connector.">
+        <property key="objectName" value="MSExchangeTransport Queues" optional="false" />
+        <property key="counterName" value="Active Non-Smtp Delivery Queue Length" optional="false" />
+        <property key="instanceName" value="_total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Retry Mailbox Delivery Queue Length" unit="number" description="Shows the number of messages in a retry state attempting to deliver a message to a remote mailbox.">
+        <property key="objectName" value="MSExchangeTransport Queues" optional="false" />
+        <property key="counterName" value="Retry Mailbox Delivery Queue Length" optional="false" />
+        <property key="instanceName" value="_total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Retry Non-Smtp Delivery Queue Length" unit="number" description="Shows the number of messages in a retry state in the non-Simple Mail Transfer Protocol (SMTP) gateway delivery queues.">
+        <property key="objectName" value="MSExchangeTransport Queues" optional="false" />
+        <property key="counterName" value="Retry Non-Smtp Delivery Queue Length" optional="false" />
+        <property key="instanceName" value="_total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Retry Remote Delivery Queue Length" unit="number" description="Shows the number of messages in a retry state in the remote delivery queues.">
+        <property key="objectName" value="MSExchangeTransport Queues" optional="false" />
+        <property key="counterName" value="Retry Remote Delivery Queue Length" optional="false" />
+        <property key="instanceName" value="_total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Messages Submitted Per Second" unit="number" description="Shows the number of messages that have been queued in the Submission queue per second.">
+        <property key="objectName" value="MSExchangeTransport Queues" optional="false" />
+        <property key="counterName" value="Messages Submitted Per Second" optional="false" />
+        <property key="instanceName" value="_total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Messages Queued for Delivery Per Second" unit="number" description="Shows the number of messages that have been queued for delivery per second.">
+        <property key="objectName" value="MSExchangeTransport Queues" optional="false" />
+        <property key="counterName" value="Messages Queued for Delivery Per Second" optional="false" />
+        <property key="instanceName" value="_total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Messages Completed Delivery Per Second" unit="number" description="Shows the number of messages that are delivered per second.">
+        <property key="objectName" value="MSExchangeTransport Queues" optional="false" />
+        <property key="counterName" value="Messages Completed Delivery Per Second" optional="false" />
+        <property key="instanceName" value="_total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Inbound: LocalDeliveryCallsPerSecond" unit="number" description="Shows the number of local delivery attempts per second.">
+        <property key="objectName" value="MSExchange Store Driver" optional="false" />
+        <property key="counterName" value="Inbound: LocalDeliveryCallsPerSecond" optional="false" />
+        <property key="instanceName" value="_total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Outbound: Submitted Mail Items Per Second" unit="number" description="Shows the number of mail items per second being submitted.">
+        <property key="objectName" value="MSExchange Store Driver" optional="false" />
+        <property key="counterName" value="Outbound: Submitted Mail Items Per Second" optional="false" />
+        <property key="instanceName" value="_total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Inbound: MessageDeliveryAttemptsPerSecond" unit="number" description="Shows the number of attempts for delivering transport mail items per second.">
+        <property key="objectName" value="MSExchange Store Driver" optional="false" />
+        <property key="counterName" value="Inbound: MessageDeliveryAttemptsPerSecond" optional="false" />
+        <property key="instanceName" value="_total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Inbound: Recipients Delivered Per Second" unit="number" description="Shows the number of inbound recipients delivered per second.">
+        <property key="objectName" value="MSExchange Store Driver" optional="false" />
+        <property key="counterName" value="Inbound: Recipients Delivered Per Second" optional="false" />
+        <property key="instanceName" value="_total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Average bytes/message" unit="number" description="Shows the average number of message bytes per inbound message received.">
+        <property key="objectName" value="MSExchangeTransport SmtpReceive" optional="false" />
+        <property key="counterName" value="Average bytes/message" optional="false" />
+        <property key="instanceName" value="_total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Messages Received/sec" unit="number" description="Shows the number of messages received by the SMTP server each second.">
+        <property key="objectName" value="MSExchangeTransport SmtpReceive" optional="false" />
+        <property key="counterName" value="Messages Received/sec" optional="false" />
+        <property key="instanceName" value="_total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Messages Sent/sec" unit="number" description="Shows the number of messages sent by the SMTP send connector each second.">
+        <property key="objectName" value="MSExchangeTransport SmtpReceive" optional="false" />
+        <property key="counterName" value="Messages Sent/sec" optional="false" />
+        <property key="instanceName" value="_total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="I/O Log Writes/sec" unit="number" description="Shows the rate of log file write operations completed.">
+        <property key="objectName" value="MSExchange Database ==&gt; Instances" optional="false" />
+        <property key="counterName" value="I/O Log Writes/sec" optional="false" />
+        <property key="instanceName" value="edgetransport/Transport Mail Database" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="I/O Log Reads/sec" unit="number" description="Shows the rate of log file read operations completed.">
+        <property key="objectName" value="MSExchange Database ==&gt; Instances" optional="false" />
+        <property key="counterName" value="I/O Log Reads/sec" optional="false" />
+        <property key="instanceName" value="edgetransport/Transport Mail Database" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Log Generation Checkpoint Depth" unit="number" description="Represents the amount of work, in count of log files, that need to be redone or undone to the database files if the process fails.">
+        <property key="objectName" value="MSExchange Database ==&gt; Instances" optional="false" />
+        <property key="counterName" value="Log Generation Checkpoint Depth" optional="false" />
+        <property key="instanceName" value="edgetransport/Transport Mail Database" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Version buckets allocated" unit="number" description="Total number of version buckets allocated.">
+        <property key="objectName" value="MSExchange Database ==&gt; Instances" optional="false" />
+        <property key="counterName" value="Version buckets allocated" optional="false" />
+        <property key="instanceName" value="edgetransport/Transport Mail Database" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="I/O Database Reads/sec" unit="number" description="Shows the rate of database read operations completed.">
+        <property key="objectName" value="MSExchange Database ==&gt; Instances" optional="false" />
+        <property key="counterName" value="I/O Database Reads/sec" optional="false" />
+        <property key="instanceName" value="edgetransport/Transport Mail Database" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="I/O Database Writes/sec" unit="number" description="Shows the rate of database write operations completed.">
+        <property key="objectName" value="MSExchange Database ==&gt; Instances" optional="false" />
+        <property key="counterName" value="I/O Database Writes/sec" optional="false" />
+        <property key="instanceName" value="edgetransport/Transport Mail Database" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Log Record Stalls/sec" unit="number" description="Shows the number of log records that cannot be added to the log buffers per second because they are full. If this counter is non-zero most of the time, the log buffer size may be a bottleneck.">
+        <property key="objectName" value="MSExchange Database ==&gt; Instances" optional="false" />
+        <property key="counterName" value="Log Record Stalls/sec" optional="false" />
+        <property key="instanceName" value="edgetransport/Transport Mail Database" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Log Threads Waiting" unit="number" description="Shows the number of threads waiting for their data to be written to the log to complete an update of the database. If this number is too high, the log may be a bottleneck.">
+        <property key="objectName" value="MSExchange Database ==&gt; Instances" optional="false" />
+        <property key="counterName" value="Log Threads Waiting" optional="false" />
+        <property key="instanceName" value="edgetransport/Transport Mail Database" optional="false" />
+      </metric>
+    </metricgroup>
+    <information>
+      <description value="When monitoring servers running Microsoft Exchange Server with the Hub Transport server role installed" />
+    </information>
+  </extension>
+</plugin>
+
