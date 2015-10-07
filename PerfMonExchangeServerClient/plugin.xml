@@ -71,78 +71,70 @@
         <property key="counterName" value="Download Tasks Completed" optional="false" />
         <property key="instanceName" value="_total" optional="false" />
       </metric>
-<!-- ICT-SHS additions -->
 <!-- Address Book -->
-      <metric defaultrate="purepath" name="NSPI RPC Browse Requests Average Latency" unit="ms" description="Shows the average time in ms, that NSPI browse requests took to complete.">
+      <metric defaultrate="purepath" name="NSPI RPC Browse Requests Average Latency" unit="ms" description="Shows the average time, in ms, that Name Service Provider Interface (NSPI) browse requests took to complete during the sampling period.">
         <property key="objectName" value="MSExchangeAB" optional="false" />
         <property key="counterName" value="NSPI RPC Browse Requests Average Latency" optional="false" />
       </metric>
-      <metric defaultrate="purepath" name="NSPI RPC Requests Average Latency" unit="ms" description="Shows the average time in ms, that NSPI requests took to complete.">
+      <metric defaultrate="purepath" name="NSPI RPC Requests Average Latency" unit="ms" description="Shows the average time, in ms, that NSPI requests took to complete during the sampling period.">
         <property key="objectName" value="MSExchangeAB" optional="false" />
         <property key="counterName" value="NSPI RPC Requests Average Latency" optional="false" />
       </metric>
-      <metric defaultrate="purepath" name="Referral RPC Requests Average Latency" unit="ms" description="Shows the average time in ms, that referral requests took to complete.">
+      <metric defaultrate="purepath" name="Referral RPC Requests Average Latency" unit="ms" description="Shows the average time, in ms, that referral requests took to complete during the sampling period.">
         <property key="objectName" value="MSExchangeAB" optional="false" />
         <property key="counterName" value="Referral RPC Requests Average Latency" optional="false" />
       </metric>
 <!-- Control Panel -->
-      <metric defaultrate="purepath" name="Outbound Proxy Requests - Average Response Time" unit="ms" description="Shows the average time in ms, that requests sent to a secondary client took to complete.">
+      <metric defaultrate="purepath" name="Outbound Proxy Requests - Average Response Time" unit="ms" description="Shows the average time (in ms) that requests sent to a secondary Client Access server took to complete during the sampling period. ">
         <property key="objectName" value="MSExchange Control Panel" optional="false" />
         <property key="counterName" value="Outbound Proxy Requests - Average Response Time" optional="false" />
       </metric>
-      <metric defaultrate="purepath" name="Requests - Average Response Time" unit="ms" description="Shows the average time in ms, the Exchange control panel took to respond.">
+      <metric defaultrate="purepath" name="Requests - Average Response Time" unit="ms" description="Shows the average time (in ms) the Exchange Control Panel took to respond to a request during the sampling period.">
         <property key="objectName" value="MSExchange Control Panel" optional="false" />
         <property key="counterName" value="Requests - Average Response Time" optional="false" />
       </metric>
 <!-- ActiveSync -->
-      <metric defaultrate="purepath" name="Sync Commands Pending" unit="number" description="Shows the number of sync commands that are currently pending in the queue.">
+      <metric defaultrate="purepath" name="Sync Commands Pending" unit="number" description="Shows the number of sync commands currently pending on the server. ">
         <property key="objectName" value="MSExchange ActiveSync" optional="false" />
         <property key="counterName" value="Sync Commands Pending" optional="false" />
       </metric>
-      <metric defaultrate="purepath" name="ActiveSync Current Requests" unit="number" description="Shows the number of HTTP requests waiting to be assigned to a threa	d.">
+      <metric defaultrate="purepath" name="ActiveSync Current Requests" unit="number" description="Shows the number of HTTP requests waiting to be assigned to a thread.">
         <property key="objectName" value="MSExchange ActiveSync" optional="false" />
         <property key="counterName" value="Current Requests" optional="false" />
       </metric>
 <!-- OWA -->
-      <metric defaultrate="purepath" name="OWA Requests/sec" unit="number" description="Shows the number of requests handled by OWA.">
+      <metric defaultrate="purepath" name="OWA Requests/sec" unit="number" description="Shows the number of requests handled by Outlook Web App per second.">
         <property key="objectName" value="MSExchange OWA" optional="false" />
         <property key="counterName" value="Requests/sec" optional="false" />
       </metric>
 <!-- AutoDiscover -->
-      <metric defaultrate="purepath" name="AutoDiscover Requests/sec" unit="number" description="Shows the number of AutoDiscover requests.">
+      <metric defaultrate="purepath" name="AutoDiscover Requests/sec" unit="number" description="Shows the number of Autodiscover service requests processed each second.">
         <property key="objectName" value="MSExchangeAutodiscover" optional="false" />
         <property key="counterName" value="Requests/sec" optional="false" />
       </metric>
 <!-- Web Service -->
-<!--
-17.	Web Service \ Requests/sec [Instance = Exchange Back End]
-This monitor shows the number of requests processed each second. This determines current user load.
- -->
-      <metric defaultrate="purepath" name="Get Requests/sec" unit="number" description="Shows the number of requests processed each second. This determines current user load.">
+      <metric defaultrate="purepath" name="Get Requests/sec" unit="number" description="Shows the number of GET requests processed each second. This determines current user load.">
         <property key="objectName" value="Web Service" optional="false" />
         <property key="counterName" value="Get Requests/sec" optional="false" />
         <property key="instanceName" value="Exchange Back End" optional="false" />
       </metric>
-      <metric defaultrate="purepath" name="Post Requests/sec" unit="number" description="Shows the number of requests processed each second. This determines current user load.">
+      <metric defaultrate="purepath" name="Post Requests/sec" unit="number" description="Shows the number of POST requests processed each second. This determines current user load.">
         <property key="objectName" value="Web Service" optional="false" />
         <property key="counterName" value="Post Requests/sec" optional="false" />
         <property key="instanceName" value="Exchange Back End" optional="false" />
       </metric>
-
-
-
-      <metric defaultrate="purepath" name="Current Connections" unit="number" description="Shows the number of connections established with the web service.">
+      <metric defaultrate="purepath" name="Current Connections" unit="number" description="Shows the current number of connections established with the Web service.">
         <property key="objectName" value="Web Service" optional="false" />
         <property key="counterName" value="Current Connections" optional="false" />
         <property key="instanceName" value="Exchange Back End" optional="false" />
       </metric>
-      <metric defaultrate="purepath" name="Connection Attempts/sec" unit="number" description="Shows the number that connections with the web service are attempted.">
+      <metric defaultrate="purepath" name="Connection Attempts/sec" unit="number" description="Shows the rate that connections to the Web service are being attempted.">
         <property key="objectName" value="Web Service" optional="false" />
         <property key="counterName" value="Connection attempts/sec" optional="false" />
         <property key="instanceName" value="Exchange Back End" optional="false" />
       </metric>
 <!-- RPC Client Access -->
-      <metric defaultrate="purepath" name="Active User Count" unit="number" description="Shows the number of active users in last 2 minutes.">
+      <metric defaultrate="purepath" name="Active User Count" unit="number" description="Shows the number of unique users that have shown some activity in the last two minutes.">
         <property key="objectName" value="MSExchange RpcClientAccess" optional="false" />
         <property key="counterName" value="Active User Count" optional="false" />
       </metric>
@@ -150,30 +142,11 @@ This monitor shows the number of requests processed each second. This determines
         <property key="objectName" value="MSExchange RpcClientAccess" optional="false" />
         <property key="counterName" value="User Count" optional="false" />
       </metric>
-      <metric defaultrate="purepath" name="RPC Operations/sec" unit="number" description="Shows the rate at which RPC operations occur.">
+      <metric defaultrate="purepath" name="RPC Operations/sec" unit="number" description="Shows the rate at which RPC operations occur, per second.">
         <property key="objectName" value="MSExchange RpcClientAccess" optional="false" />
         <property key="counterName" value="RPC Operations/sec" optional="false" />
       </metric>
-    </metricgroup>
-<!--
-
-17.	Web Service \ Requests/sec [Instance = Exchange Back End]
-This monitor shows the number of requests processed each second. This determines current user load.
-
-18.	Web Service \ Current Connections [Instance = Exchange Back End]
-This monitor shows the current number of connections established with the Web service. This determines current user load.
-19.	Web Service \ Connection Attempts/sec [Instance = Exchange Back End]
-This monitor shows the rate that connections to the Web service are being attempted. This determines current user load.
-20.	MSExchange RpcClientAccess \ Active User Count
-This monitor shows the number of unique users that have shown some activity in the last two minutes.
-21.	MSExchange RpcClientAccess \ User Count
-This monitor shows the number of users connected to the service.
-22.	MSExchange RpcClientAccess \ RPC Operations/sec
-This monitor shows the rate at which RPC operations occur, per second.
-
-
- -->    
-    
+    </metricgroup>        
     <information>
       <description value="When monitoring servers running Microsoft Exchange Server with the Client Access role installed" />
     </information>

@@ -63,13 +63,6 @@
         <property key="counterName" value="RPC Latency average (msec)" optional="false" />
         <property key="instanceName" value="_Total" optional="false" />
       </metric>
-<!-- duplicate entry      
-      <metric defaultrate="purepath" name="RPC Requests outstanding" unit="number" description="Shows the current number of outstanding RPC requests.">
-        <property key="objectName" value="MSExchange Store Interface" optional="false" />
-        <property key="counterName" value="RPC Requests outstanding" optional="false" />
-        <property key="instanceName" value="_Total" optional="false" />
-      </metric>
--->
       <metric defaultrate="purepath" name="ROP Requests outstanding" unit="number" description="Shows the total number of outstanding remote operations (ROP) requests.">
         <property key="objectName" value="MSExchange Store Interface" optional="false" />
         <property key="counterName" value="ROP Requests outstanding" optional="false" />
@@ -177,7 +170,6 @@
         <property key="counterName" value="Events in queue" optional="false" />
         <property key="instanceName" value="msexchangemailboxassistants-total" optional="false" />
       </metric>
-<!-- ICT-SHS Counters -->
       <metric defaultrate="purepath" name="Average Event Processing Time in Seconds" unit="s" description="Shows the average processing time of the events chosen. The returned values should be less than two at all times.">
         <property key="objectName" value="MSExchange Assistants - Per Database" optional="false" />
         <property key="counterName" value="Average Event Processing Time in Seconds" optional="false" />
