@@ -6,4 +6,3 @@ Bundle-Name: Exchange Server Unified Messaging Perfmon counters
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: com.dynatrace.diagnostics.plugin.PerfMonExchangeS
  erverUnifiedMessaging;singleton:=true
-

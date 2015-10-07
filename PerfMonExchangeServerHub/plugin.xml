@@ -131,9 +131,54 @@
         <property key="instanceName" value="_total" optional="false" />
       </metric>
       <metric defaultrate="purepath" name="Messages Sent/sec" unit="number" description="Shows the number of messages sent by the SMTP send connector each second.">
-        <property key="objectName" value="MSExchangeTransport SmtpReceive" optional="false" />
+        <property key="objectName" value="MSExchangeTransport SmtpSend" optional="false" />
         <property key="counterName" value="Messages Sent/sec" optional="false" />
         <property key="instanceName" value="_total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="I/O Database Reads (Attached) Average Latency" unit="ms" description="Shows the average length of time, in milliseconds, per database read operation. It indicates the average time, in milliseconds (ms), to read from the database file. The average returned value should be below 20ms. Spikes (maximum values) shouldn't be higher than 100ms.">
+        <property key="objectName" value="Database" optional="false" />
+        <property key="counterName" value="I/O Database Reads (Attached) Average Latency" optional="false" />
+        <property key="instanceName" value="svchost" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="I/O Database Writes (Attached) Average Latency" unit="ms" description="Indicates the average time, in ms, to write to the database file. This counter is not a good indicator for client latency because database writes are asynchronous. In general, this latency should be less than the MSExchange Database\I/O Database Reads (Attached) Average Latency when battery-backed write caching is utilized.">
+        <property key="objectName" value="Database" optional="false" />
+        <property key="counterName" value="I/O Database Writes (Attached) Average Latency" optional="false" />
+        <property key="instanceName" value="svchost" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="I/O Log Writes Average Latency" unit="ms" description="Indicates the average time, in ms, to write a log buffer to the active log file. The returned values should be 10 on production servers. If this counter is greater than 10, it is an indication that the MSExchange Database\I/O Database Writes (Attached) Average Latency is too high.">
+        <property key="objectName" value="Database" optional="false" />
+        <property key="counterName" value="I/O Log Writes Average Latency" optional="false" />
+        <property key="instanceName" value="svchost" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="I/O Database Reads (Recovery) Average Latency" unit="ms" description="Indicates the average time, in ms, to read from the database file. The average returned values should be below 200ms. Spikes (maximum values) should not be higher than 1,000ms.">
+        <property key="objectName" value="Database" optional="false" />
+        <property key="counterName" value="I/O Database Reads (Recovery) Average Latency" optional="false" />
+        <property key="instanceName" value="svchost" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="I/O Database Writes (Recovery) Average Latency" unit="ms" description="Indicates the average time, in ms, to write to the database file. In general, this latency should be less than the MSExchange Database\I/O Database Reads (Recovery) Average Latency when battery-backed write caching is utilized.">
+        <property key="objectName" value="Database" optional="false" />
+        <property key="counterName" value="I/O Database Writes (Recovery) Average Latency" optional="false" />
+        <property key="instanceName" value="svchost" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="I/O Log Reads Average Latency" unit="ms" description="Indicates the average time, in ms, to read data from a log file. This is specific to log replay and database recovery operations. The average returned value should be below 200ms. Spikes (maximum values) should not be higher than 1,000ms.">
+        <property key="objectName" value="Database" optional="false" />
+        <property key="counterName" value="I/O Log Reads Average Latency" optional="false" />
+        <property key="instanceName" value="svchost" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Version buckets allocated" unit="number" description="Shows the total number of version buckets allocated. The returned values should be less than 12,000 at all times. The maximum default version is 16,384. If version buckets reach 70% of maximum, the server is at risk of running out of the version store.">
+        <property key="objectName" value="Database" optional="false" />
+        <property key="counterName" value="Version buckets allocated" optional="false" />
+        <property key="instanceName" value="svchost" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Database Cache Size (MB)" unit="number" description="Shows the amount of system memory, in megabytes (MB), used by the database cache manager to hold commonly used information from the database files to prevent file operations. The maximum value is 2GB of RAM (3GB for servers with sync replication enabled). This and Database Cache Hit % are useful counters for gauging whether a server's performance problems might be resolved by adding more physical memory. Use this counter along with Store Private Bytes to determine if there are store memory leaks. If the database cache size seems too small for optimal performance and there is little available memory on the system (check the value of Memory/Available Bytes), adding more memory to the system may increase performance. If there is ample memory on the system and the database cache size is not growing beyond a certain point, the database cache size may be capped at an artificially low limit. Increasing this limit may increase performance.">
+        <property key="objectName" value="Database" optional="false" />
+        <property key="counterName" value="Database Cache Size (MB)" optional="false" />
+        <property key="instanceName" value="svchost" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Log Bytes Write/sec" unit="bytes" description="Shows the rate of bytes written to the log. The returned values should be less than 10,000,000 at all times. With each log file being 1,000,000 bytes in size, 10,000,000 bytes/sec would yield 10 logs per second. This may indicate a large message being sent or a looping message.">
+        <property key="objectName" value="Database" optional="false" />
+        <property key="counterName" value="Log Bytes Write/sec" optional="false" />
+        <property key="instanceName" value="svchost" optional="false" />
       </metric>
       <metric defaultrate="purepath" name="I/O Log Writes/sec" unit="number" description="Shows the rate of log file write operations completed.">
         <property key="objectName" value="MSExchange Database ==&gt; Instances" optional="false" />

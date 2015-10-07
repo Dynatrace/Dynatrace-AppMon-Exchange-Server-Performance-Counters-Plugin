@@ -54,7 +54,7 @@
         <property key="objectName" value="MSExchange Calendar Attendant" optional="false" />
         <property key="counterName" value="Average Calendar Attendant Processing time" optional="false" />
       </metric>
-      <metric defaultrate="purepath" name="Requests Failed" unit="number" description="Shows the total number of failures that occurred while the Calendar Attendant was processing events.">
+      <metric defaultrate="purepath" name="Calendar Requests Failed" unit="number" description="Shows the total number of failures that occurred while the Calendar Attendant was processing events.">
         <property key="objectName" value="MSExchange Calendar Attendant" optional="false" />
         <property key="counterName" value="Requests Failed" optional="false" />
       </metric>
@@ -63,19 +63,14 @@
         <property key="counterName" value="RPC Latency average (msec)" optional="false" />
         <property key="instanceName" value="_Total" optional="false" />
       </metric>
-      <metric defaultrate="purepath" name="RPC Requests outstanding" unit="number" description="Shows the current number of outstanding RPC requests.">
-        <property key="objectName" value="MSExchange Store Interface" optional="false" />
-        <property key="counterName" value="RPC Requests outstanding" optional="false" />
-        <property key="instanceName" value="_Total" optional="false" />
-      </metric>
       <metric defaultrate="purepath" name="ROP Requests outstanding" unit="number" description="Shows the total number of outstanding remote operations (ROP) requests.">
         <property key="objectName" value="MSExchange Store Interface" optional="false" />
         <property key="counterName" value="ROP Requests outstanding" optional="false" />
         <property key="instanceName" value="_Total" optional="false" />
       </metric>
-      <metric defaultrate="purepath" name="RPC Requests Outstanding" unit="number" description="Shows the total number of outstanding RPC requests.">
+      <metric defaultrate="purepath" name="RPC Requests outstanding" unit="number" description="Shows the total number of outstanding RPC requests.">
         <property key="objectName" value="MSExchange Store Interface" optional="false" />
-        <property key="counterName" value="RPC Requests Outstanding" optional="false" />
+        <property key="counterName" value="RPC Requests outstanding" optional="false" />
         <property key="instanceName" value="_Total" optional="false" />
       </metric>
       <metric defaultrate="purepath" name="RPC Requests failed (%)" unit="percent" description="Shows the percentage of failed requests in the total number of RPC requests. Here, failed means the sum of failed with error code plus failed with exception.">
@@ -113,9 +108,9 @@
         <property key="counterName" value="Temporary Submission Failures/sec" optional="false" />
         <property key="instanceName" value="_Total" optional="false" />
       </metric>
-      <metric defaultrate="purepath" name="Average ResourceBooking Processing Time" unit="ms" description="Shows the average time to process an event in the Resource Booking Attendant.">
+      <metric defaultrate="purepath" name="Average Resource Booking Processing Time" unit="ms" description="Shows the average time to process an event in the Resource Booking Attendant.">
         <property key="objectName" value="MSExchange Resource Booking" optional="false" />
-        <property key="counterName" value="Average ResourceBooking Processing Time" optional="false" />
+        <property key="counterName" value="Average Resource Booking Processing Time" optional="false" />
       </metric>
       <metric defaultrate="purepath" name="Slow Findrow Rate" unit="number" description="Shows the rate at which the slower FindRow needs to be used in the mailbox store.">
         <property key="objectName" value="MSExchangeIS Mailbox" optional="false" />
@@ -161,20 +156,47 @@
         <property key="instanceName" value="_total" optional="false" />
       </metric>
       <metric defaultrate="purepath" name="Mailboxes Processed/sec" unit="number" description="Shows the rate of mailboxes processed by time-based assistants per second.">
-        <property key="objectName" value="MSExchange Assistants" optional="false" />
+        <property key="objectName" value="MSExchange Assistants - Per Database" optional="false" />
         <property key="counterName" value="Mailboxes Processed/sec" optional="false" />
-        <property key="instanceName" value=" " optional="false" />
+        <property key="instanceName" value="msexchangemailboxassistants-total" optional="false" />
       </metric>
       <metric defaultrate="purepath" name="Events Polled/sec" unit="number" description="Shows the number of events polled per second.">
-        <property key="objectName" value="MSExchange Assistants" optional="false" />
+        <property key="objectName" value="MSExchange Assistants - Per Database" optional="false" />
         <property key="counterName" value="Events Polled/sec" optional="false" />
-        <property key="instanceName" value=" " optional="false" />
+        <property key="instanceName" value="msexchangemailboxassistants-total" optional="false" />
       </metric>
       <metric defaultrate="purepath" name="Events in queue" unit="number" description="Shows the number of events in the in-memory queue waiting to be processed by the assistants.">
-        <property key="objectName" value="MSExchange Assistants" optional="false" />
+        <property key="objectName" value="MSExchange Assistants - Per Database" optional="false" />
         <property key="counterName" value="Events in queue" optional="false" />
-        <property key="instanceName" value=" " optional="false" />
+        <property key="instanceName" value="msexchangemailboxassistants-total" optional="false" />
       </metric>
+      <metric defaultrate="purepath" name="Average Event Processing Time in Seconds" unit="s" description="Shows the average processing time of the events chosen. The returned values should be less than two at all times.">
+        <property key="objectName" value="MSExchange Assistants - Per Database" optional="false" />
+        <property key="counterName" value="Average Event Processing Time in Seconds" optional="false" />
+        <property key="instanceName" value="msexchangemailboxassistants-total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Requests Failed" unit="number" description="Shows the total number of failures that occurred while the Resource Booking Attendant was processing events. Returned values should be 0 at all times.">
+        <property key="objectName" value="MSExchange Resource Booking" optional="false" />
+        <property key="counterName" value="Requests Failed" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Failed Submissions Per Second" unit="number" description="Shows the number of failed submissions per second. Returned values should be 0 at all times.">
+        <property key="objectName" value="MSExchange Submission" optional="false" />
+        <property key="counterName" value="Failed Submissions Per Second" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="Temporary Submission Failures/sec" unit="number" description="Shows the number of temporary submission failures per second. Returned values should be 0 at all times.">
+        <property key="objectName" value="MSExchange Submission" optional="false" />
+        <property key="counterName" value="Temporary Submission Failures/sec" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="CopyQueueLength" unit="s" description="Shows the number of transaction log files waiting to be copied to the passive copy log file folder. A copy is not considered complete until it has been checked for corruption. Returned values should be less than 1 at all times for continuous replication.">
+        <property key="objectName" value="MSExchange Replication" optional="false" />
+        <property key="counterName" value="CopyQueueLength" optional="false" />
+        <property key="instanceName" value="_total" optional="false" />
+      </metric>
+      <metric defaultrate="purepath" name="ReplayQueueLength" unit="s" description="Shows the number of transaction log files waiting to be replayed into the passive copy. This indicates the current replay queue length. Higher values cause longer store mount times when a handoff, failover, or activation is performed.">
+        <property key="objectName" value="MSExchange Replication" optional="false" />
+        <property key="counterName" value="ReplayQueueLength" optional="false" />
+        <property key="instanceName" value="_total" optional="false" />
+      </metric>      
     </metricgroup>
     <information>
       <description value="When monitoring servers running Microsoft Exchange Server with the Mailbox server role installed." />
