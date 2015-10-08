@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-Vendor: dynaTrace software GmbH
 Bundle-ClassPath: .
-Bundle-Version: 3.5.2.6
+Bundle-Version: 3.6.0
 Bundle-Name: Exchange Server Client Access Perfmon counters
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: com.dynatrace.diagnostics.plugin.PerfMonExchangeS
